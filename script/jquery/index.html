@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>YuDW | Webstoryboy | Photoshop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://wiss.tistory.com/">Design</a></li>
+                    <li><a href="https://webzz.tistory.com/">Coding</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs4" id="content">
+        <div class="container">
+            <h1>jquery v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://ydw2389.dothome.co.kr" target="_blank">ydw2389.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header"></h2>
+                  
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro4 -->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>유형</th>
+                                <th>메서드</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ce va" rowspan="5">Attributes</td>
+                                <td>.attr() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 HTML 속성 값을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.prop()</td>
+                                <td>선택한 요소의 javascript 속성 값을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.removeAttr()</td>
+                                <td>선선택한 요소의 HTML 속성 값을 제거합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.removeprop()</td>
+                                <td>선택한 요소의 javascript 속성 값을 제거합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.val()</td>
+                                <td>선택한 폼 요소의 속성 값을 설정하거나 반환합니다.</td>
+                            </tr>
+
+                            <tr>
+                                <td class="ce va" rowspan="5">CSS</td>
+                                <td>.addClass() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 클래스를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.css() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 CSS 속성 값을 설정하거나 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.hasClass() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 클래스가 있는지를 찾습니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.removeClass()</td>
+                                <td>선택한 요소의 클래스를 삭제합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.toggleClass() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소에 클래스의 추가/제거를 연속하여 사용할 수 있습니다.</td>
+                            </tr>
+
+                            <tr>
+                                <td class="ce va" rowspan="6">Dimensions</td>
+                                <td>.height()</td>
+                                <td>선택한 요소의 높이(패딩/마진/보더 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.innerHeight()</td>
+                                <td>선택한 요소의 높이(패딩포함, 마진/보더 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.innerWidth()</td>
+                                <td>선택한 요소의 가로(패딩포함, 마진/보더 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.outerHeight()</td>
+                                <td>선택한 요소의 높이(패딩/보더포함, 마진 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.outerWidth()</td>
+                                <td>선택한 요소의 가로(패딩/보더포함, 마진 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.width()</td>
+                                <td>선택한 요소의 가로(패딩/마진/보더 불포함)를 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce va" rowspan="5">offset</td>
+                                <td>.offset() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 위치 좌표 값(문서 기준)을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.offsetParent()</td>
+                                <td>선택한 요소의 부모 위치 좌표 값(문서 기준)을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.position()</td>
+                                <td>선택한 요소의 위치 좌표 값(기준점 기준)을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.scrollLeft() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 가로 스크롤 값을 설정하거나 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>.scrollTop() <span style="color:red">&hearts;</span></td>
+                                <td>선택한 요소의 세로 스크롤 값을 설정하거나 반환합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5> ??? <a href="jquery05.html">VIEW</a></h5>
+<pre class="line-numbers language-markup"><code>
+
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">제이쿼리</a></li>
+                        <li><a href="#intro2">선택자</a></li>
+                        <li><a href="#intro3">탐색</a></li>
+                        <li><a href="#intro4">속성</a></li>
+                        <li><a href="#intro5">변경</a></li>
+                        <li><a href="#intro6">애니메이션</a></li>
+                        <li><a href="#intro7">이벤트</a></li>
+                        <li><a href="#intro8">aJax</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>

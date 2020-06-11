@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <style>
+    *{margin: 0; padding: 0;}
+
+        #wrap { }
+        #container {width: 1900px; margin: 0 auto;}
+        #header {width: 100#; background: url(../site-responsive/img/header_bg.jpg) repeat-x center top;}
+        #header .container {width: 100%; }
+        #header .container .row {padding: 0 10px; }
+        #header .container .row .header1 {height: 340px; }
+        .header-tit {color: #fff; text-align: left;}
+        .header-tit {color: #fff;}
+
+        .header-main {text-align: center; }
+        .header-main h2 {font-size: 30px; color: #fff; background-color: deepskyblue; display: inline-block; padding: 5px 10px;}
+        .header-main a {display: inline-block; font-size: 20px; color: #fff; background-color: dodgerblue; margin: -7px; padding: 5px 10px;}
+
+        .section-1 {width: 1200px; overflow: hidden;}
+        .article1 {width: 30%; height: 400px; background: #90caf9; float: left;}
+        .article2 {width: 70%; height: 200px; background: #64b5f6; float: left}
+        .article3 {width: 70%; height: 200px; background: #42a5f5; float: left}
+
+        .section-2 {width: 1200px; overflow: hidden;}
+        .article4 {width: 33.33%; height: 200px; background: #2196f3; float: left;}
+        .article5 {width: 33.33%; height: 200px; background: #1e88e5; float: left;}
+        .article6 {width: 33.33%; height: 200px; background: #1976d2; float: left;}
+
+        .section-3 {width: 1200px; overflow: hidden; background: #90caf9  ;}
+        .section-3 > article {width: 21%; margin: 2%; height: 150px; float: left; background: #1565c0; border-radius: 30px;}
+        .article7 { }
+        .article8 { }
+        .article9 { }
+        .article10 { }
+        
+        footer {width: 1200px; height: 100px;background: #bbdefb; }
+
+        @media (max-width: 1024px) {
+            #container {width: 100%;}
+            .section-1 {width: 100%;}
+            .section-2 {width: 100%;}
+            .section-3 {width: 100%;}
+            footer {width: 100%;}
+            #header {width: 100%;}
+            .article4 { width: 50%;} 
+            .article5 { width: 50%;} 
+            .article6 {display: none;}
+            .section-3 > article {width: 29.33%;}
+            .article10 {display:none;}
+        }
+        @media (max-width: 768px) {
+            .article4 { width: 100%; height: 200px;} 
+            .article5 { width: 100%; height: 200px;} 
+        }
+        @media (max-width: 480px) {
+            .article1 {width: 100%; height: 200px;}
+            .article2 {width: 100%;}
+            .article3 {width: 100%;}
+            
+            .section-3 > article {width: 96%;}
+        }
+    </style>
+    
+</head>
+<body>
+<div id="wrap">
+    <div id="container">
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header1">
+                        <div class="header-tit">
+                            <a href="#">Category</a>
+                            <a href="#">Publisher</a>
+                            <a href="#">Youtube</a>
+                        </div>
+                        <div class="header-main">
+                            <h2>PROFESSIONAL DESIGNER & PUBLISHER</h2><br>
+                            <a href="ydw2389.dothome.co.kr">Yu_DW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="section-1">
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+        </section>
+        <section class="section-2">
+            <article class="article4"></article>
+            <article class="article5"></article>
+            <article class="article6"></article>
+        </section>
+        <section class="section-3">
+            <article class="article7"></article>
+            <article class="article8"></article>
+            <article class="article9"></article>
+            <article class="article10"></article>
+        </section>
+        <footer></footer>
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* layout */
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 120px; height: 120px;
+    background: url(../img/logo.jpg) no-repeat center;
+    background-size: contain;
+}
+.header-menu {
+    padding-top: 7.5vh;
+}
+.header-menu li {
+    display: inline-block;
+    margin-left: 4vw;
+    font-size: 20px;
+    font-weight: 900;
+    position: relative; 
+    cursor: pointer; 
+}
+.header-menu li ul {
+    position: absolute; top: 50px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;    
+    display: none;
+    width: 8vw;
+    text-align: center;
+    background: #fff;
+    opacity: 0.8;
+}
+.header-menu li ul li {
+    display: block;   
+    padding: 0.2vw;
+    margin: 0 0 1vh 0;
+    
+}
+.header-menu li ul li:hover{
+    background: #000;
+    color: white;
+    opacity: 0.8;
+}
+
+/* banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 62vh;
+    margin-bottom: 3vh;
+}
+.img-slider {
+    width: 240vw;
+    position: absolute; left: 0; top: 0;
+    display: flex;
+}
+.slider {
+    width: 100vw;
+}
+
+/* contents1 */
+.contents1 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2%;
+    margin-bottom: 6vh;
+}
+.cont1-notice {
+    border: 1px solid #ccc;
+    padding: 4% 5%;
+    position: relative;
+}
+.tab-menu {
+    margin-bottom: 2.5vh;
+}
+.tab-menu ul li {
+    color: rgb(185, 184, 184);
+    cursor: pointer;
+    display: inline;
+    font-size: 28px;
+    font-weight: 800;
+}
+.tab-menu ul li:first-child {
+    position: relative;
+    margin-right: 1.5vw;
+}
+.tab-menu ul li:first-child::after {
+    content: '';
+    width: 2px;
+    height: 28px;
+    background: #000;
+    position: absolute;
+    right: -18px;top: 8px;
+}
+.tab-menu ul li.active {
+    color: black;
+}
+.tab-info ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+.tab-info ul li p {
+    font-size: 20px;
+}
+.tab-info ul li span {
+    font-size: 16px;
+    opacity: 0.5;
+}
+.tab-info-02 {    
+}
+.cont1-notice .more { 
+    position: absolute;
+    top: 4vh;right: 1.4vw;
+}
+.more img {
+    vertical-align:middle;
+    width: 30%;    
+    margin-left: 0.5vw;
+}
+.cont1-benefit {
+    cursor: pointer;
+}
+.pop-up {
+    width: 40vw; height: 40vh;
+    background: url(../../../parallax/img/img09.gif);
+    position: absolute; left: 30vw; bottom: 30vh;
+    box-shadow: 4px 4px 3px 0;
+    display: none;
+    position: fixed;
+    z-index: 500;
+ 
+}
+.pop-up .pop-up-close {
+    width: 25px; height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute; right: 10px; top: 10px;
+    cursor: pointer;
+}
+.pop-up-close::after {
+    content: '';
+    width: 20px; height: 2px;
+    background: #fff;
+    position: absolute; top: 12px;right: 2.5px;
+    transform: rotate(45deg)
+}
+.pop-up-close::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: #fff;
+    position: absolute; top: 12px; right: 2.5px;
+    transform: rotate(-45deg)
+}
+
+/* contents2 */
+.contents2 {
+    margin-bottom: 6vh;
+}
+.contents2 h1 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 2vh;
+}
+.cont2-imgwrap {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.2%;
+}
+.cont2-imgwrap p {
+    margin-top: 2vh;
+    font-size: 18px;
+    opacity: 0.8;
+}
+/* footer */
+.footer {
+    padding: 3vh 0 5vh 0;
+    border-top: 1px solid #ccc;
+    opacity: 0.8;
+}    
+
+.footer li {
+    display: inline-block;
+    margin-bottom: 0.5vh;
+    font-size: 15px;
+
+}
+.footer p {
+    margin-top: 2vh;
+}
+    

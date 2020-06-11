@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider05</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+    @font-face {
+        font-family: 'DWImpactamin';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    ul {
+        padding: 10px 20px;
+    }
+
+    body {
+        background: url(img/img01.gif) no-repeat center;
+        background-size: cover;
+        font-family: 'Oswald', 'DWImpactamin';
+        color: #fff;
+        height: 100vh;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(50, 37, 11, 0.8);
+        z-index: -1;
+    }
+
+    .info {
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+    .info h1 {
+        margin-bottom: 10px;
+    }
+
+    .info2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .info2 li {
+        list-style: none;
+        margin-bottom: 5px;
+    }
+
+    .info2 a {
+        color:#fff;
+    }
+    .info2 li.active a {
+        border-bottom: 1px dashed #fff;
+    }
+
+
+    /* slid */
+    .slider-wrap {
+        width: 1000px;
+        height: 600px;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+
+    }
+
+    .slider-img {
+        position: relative;
+        width: 1000px;
+        height: 3000px;
+        overflow: hidden;
+    }
+
+    .slider-img .slides {
+        width: 1000px;
+    }
+</style>
+
+<body>
+    <div class="info">
+        <h1>Image Slider05</h1>
+        <p>위로 움직이기</p>
+        <ul>
+            <li>3초에 한 번씩 움직이기</li>
+            <li>연속적으로 움직이기</li>
+        </ul>
+    </div>
+    <div class="info2">
+        <ul>
+            <li ><a href="slide01.html">slide01</a></li>
+            <li><a href="slide02.html">slide02</a></li>
+            <li><a href="slide03.html">slide03</a></li>
+            <li><a href="slide04.html">slide04</a></li>
+            <li class="active"><a href="slide05.html">slide05</a></li>
+            <li><a href="slide06.html">slide06</a></li>
+            <li><a href="slide07.html">slide07</a></li>
+            <li><a href="slide08.html">slide08</a></li>
+            <li><a href="slide09.html">slide09</a></li>
+        </ul>
+    </div>
+
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slides"><img src="img/img01.gif" alt="이미지"></div>
+            <div class="slides"><img src="img/img02.gif" alt="이미지"></div>
+            <div class="slides"><img src="img/img03.gif" alt="이미지"></div>
+            <div class="slides"><img src="img/img04.gif" alt="이미지"></div>
+            <div class="slides"><img src="img/img05.gif" alt="이미지"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const slideImg = $(".slider-img");
+        const slides = $(".slides");
+
+        setInterval(function(){
+            slideImg.animate({top : "-600px"},400,function(){
+                $(".slides:first-child").appendTo(slideImg)
+                slideImg.css("top","");
+            })
+        },3000);
+    </script>
+</body>
+
+</html>

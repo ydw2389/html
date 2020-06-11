@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>layout09</title>
+    
+    <link rel="stylesheet" href="../site-webstandard/css/reset.css">
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap { }
+        #header {height: 100px; line-height: 100px ;background-color: #f1f8e9; font-size: 40px; text-transform: uppercase; color: #fff; text-align: center;}
+        #banner {height: 300px; line-height: 300px; background-color: #dcedc8 ; font-size: 40px; text-transform: uppercase; color: #fff; text-align: center;}
+        
+        #content1 {height: 500px; background-color: #c5e1a5 ;}
+        #content1 .container {}       
+        
+        #content2 {height: 200px; line-height: 200px; background-color: #aed581 ;font-size: 40px; text-transform: uppercase; color: #fff; text-align: center; }
+        
+        #content3 {height: 300px; background-color: #dcedc8 ;}
+        #content3 .container {}
+        #content3 .container .notice1 {position: relative; float: left; width: 300px; height: 200px; background-color: floralwhite; margin: 50px 100px;}
+        #content3 .container .notice1 h4 {font-size: 15px; color:blue; font-weight: bold; padding: 10px;}
+        #content3 .container .notice1 ul {padding: 5px 10px;overflow: hidden}
+        #content3 .container .notice1 li {padding: 5px 7px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: url(../site-webstandard/img/dot.gif) 0 11px no-repeat; }
+        #content3 .container .notice1 .more1 {background: url(../site-webstandard/img/icon.png) -150px -90px; width: 17px;height: 17px; position: absolute; top: 9px; right: 9px}
+        #content3 .container .notice1 .more1:hover {background: url(../site-webstandard/img/icon.png) -167px -90px; width: 17px;height: 17px; position: absolute; top: 9px; right: 9px }
+        
+        #content3 .container .notice2 {position: relative; float: left; width: 300px; height: 200px; background-color: floralwhite; margin: 50px 100px;}
+        #content3 .container .notice2 h4 {font-size: 15px; padding: 10px; border-bottom: 1px solid black}
+        #content3 .container .notice2 h4 em {color: red; font-weight: bold}
+        #content3 .container .notice2 ul {padding: 10px }
+        #content3 .container .notice2 ul li {overflow: hidden; background: url(../site-webstandard/img/dot.gif) 0 8px no-repeat; padding: 2px 8px}
+        #content3 .container .notice2 ul li a {float: left;}
+        #content3 .container .notice2 ul li span {float: right}
+        #content3 .container .notice2 .more2 {position: absolute; top:11px; right: 7px}
+        
+        
+        #footer {height: 150px; line-height: 150px; background-color: #f1f8e9 ;font-size: 40px; text-transform: uppercase; color: #fff; text-align: center;}
+        
+        .container {width: 1000px; height: inherit; background-color: rgba(0,0,0,0.1); margin: 0 auto;}
+        .chicken {text-align: center; line-height: 230px; color:cornflowerblue; font-size: 40px; float: left; width: 230px; height: 230px; margin: 10px; background-color: antiquewhite}
+        
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">Header</div>
+        </div>
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id="content1">
+            <div class="container">
+                <div class="chicken">배</div>
+                <div class="chicken">틀</div>
+                <div class="chicken">그</div>
+                <div class="chicken">라</div>
+                <div class="chicken">운</div>
+                <div class="chicken">드</div>
+                <div class="chicken">치</div>
+                <div class="chicken">킨</div>
+            </div>
+        </div>
+        <div id="content2">
+            <div class="container">content2</div>
+        </div>
+        <div id="content3">
+            <div class="container">
+                <div class="notice1">
+                    <h4>배틀그라운드 치킨 뉴스</h4>
+                    <ul>
+                        <li><a href="#">속보) 유동원 방금 2번째 치킨까지 먹어서 화제</a></li>
+                        <li><a href="#">다시 나락으로 떨어지는 그의 실력은 언제 올라오는가</a></li>
+                        <li><a href="#">속보) 유동원 일주일만에 배그 첫 치킨 달성 너무 기분좋아 앙</a></li>
+                        <li><a href="#">유동원 현재 일주일째 치킨 못먹는중 컴퓨터 팔아버릴까 고민도해</a></li>
+                        <li><a href="#">유동원 고민끝에 친구와 배그 접속</a></li>
+                    </ul>
+                    <a href="#" class="more1 ir_pm">더보기</a>
+                </div>
+                <div class="notice2">
+                    <h4>3월 마지막주 <em>점심식단!!</em></h4>
+                    <ul>
+                        <li><a href="#">동근이가 준비해 오는걸로</a><span>2020.03.30</span></li>
+                        <li><a href="#">다빈이가 준비해 오는걸로</a><span>2020.03.31</span></li>
+                        <li><a href="#">현진이가 준비해 오는걸로</a><span>2020.04.01</span></li>
+                        <li><a href="#">승규가 준비해 오는걸로</a><span>2020.04.02</span></li>
+                        <li><a href="#">한나가 준비해 오는걸로</a><span>2020.04.03</span></li>                        
+                    </ul>
+                    <a href="#" class="more2">더보기</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+    </div>
+</body>
+
+</html>

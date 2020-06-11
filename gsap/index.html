@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="yudongwon">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>유동원 | Yu_DW | jquery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/../assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/../assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://wiss.tistory.com/">Design</a></li>
+                    <li><a href="https://webzz.tistory.com/">Coding</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs3" id="content">
+        <div class="container">
+            <h1>GSAP Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://ydw2389.dothome.co.kr" target="_blank">ydw2389.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9" role="main"> 
+                <style>                    
+                    .circle {
+                        width: 50px; height: 50px;                        
+                        background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+                        border-radius: 50%;
+                        margin-bottom: 10px;
+                        position: relative;
+                        color: white;
+                        text-align: center;
+                        line-height: 50px;
+                    }
+                </style>
+                <!-- Intro1 -->        
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">이동하기</h2>
+                    <h4>animation
+                        <button class="btn1">start</button>                    
+                    </h4>
+                    <div class="well">
+                        <div class="box box1">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>
+                            <div class="circle circle10">box</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro1-->
+
+                <!-- Intro2 -->        
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">이동하기(from)</h2>
+                    <h4>animation
+                        <button class="btn2">start</button>                    
+                    </h4>
+                    <div class="well">
+                        <div class="box box2">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>
+                            <div class="circle circle10">box</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro2-->
+
+                <!-- Intro3 -->        
+                 <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">이동하기(easing)</h2>
+                    <h4>animation
+                        <button class="btn3">start</button>                    
+                    </h4>
+                    <div class="well">
+                        <div class="box box3">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>
+                            <div class="circle circle6">box</div>
+                            <div class="circle circle7">box</div>
+                            <div class="circle circle8">box</div>
+                            <div class="circle circle9">box</div>                            
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro3-->
+
+                <!-- Intro4 -->        
+                 <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">반복하기</h2>
+                    <h4>animation
+                        <button class="btn4">start</button>                    
+                    </h4>
+                    <div class="well">
+                        <div class="box box4">
+                            <div class="circle circle1">box</div>
+                            <div class="circle circle2">box</div>
+                            <div class="circle circle3">box</div>
+                            <div class="circle circle4">box</div>
+                            <div class="circle circle5">box</div>                                                    
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro4-->
+
+                <!-- Intro5 -->        
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Timeline</h2>
+                    <h4>animation
+                        <button class="btn5">start</button>                    
+                    </h4>
+                    <div class="well">
+                        <div class="box box5">
+                            <div class="circle circle1">box</div>                                                                               
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro5-->
+
+
+              
+            </div>
+            <!-- //col-md-9 -->
+
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">SVG</a></li>
+                        <li><a href="#intro2">이동하기(from)</a></li>
+                        <li><a href="#intro3">이동하기(ease)</a></li>
+                        <li><a href="#intro4">반복하기</a></li>
+                        <li><a href="#intro5">Timeline</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    
+    <script>
+        $(".btn1").click(function(){
+            // $(".box1 > div").animate({left:"90%"},1000)
+            gsap.to(".box1 .circle1", 1, {left:"90%"})
+            gsap.to(".box1 .circle2", 1, {left:"90%", borderRadius: "0%"})
+            gsap.to(".box1 .circle3", 1, {left:"90%", skewY:"800deg"})
+            gsap.to(".box1 .circle4", 1, {left:"90%", rotationY:"300deg"})            
+            gsap.to(".box1 .circle5", 1, {left:"90%", backgroundImage: "linear-gradient(to right, #434343 0%, black 100%)"})
+            gsap.to(".box1 .circle6", 1, {left:"90%", scale:"3", rotationY:"300deg"})
+            gsap.to(".box1 .circle7", 1, {left:"90%", scale:"3", rotation:"360deg"})
+            gsap.to(".box1 .circle8", 1, {left:"90%", scale:"0.5"})
+            gsap.to(".box1 .circle9", 1, {left:"90%", skew:"0.5"})
+            gsap.to(".box1 .circle10", 1, {left:"90%", scale:"0.5"})
+        })
+
+        $(".btn2").click(function(){            
+            gsap.from(".box2 .circle1", 1, {left:"90%"})
+            gsap.from(".box2 .circle2", 1, {left:"90%", borderRadius: "0%"})
+            gsap.from(".box2 .circle3", 1, {left:"90%", skewY:"800deg"})
+            gsap.from(".box2 .circle4", 1, {left:"90%", rotationY:"300deg"})            
+            gsap.from(".box2 .circle5", 1, {left:"90%", backgroundImage: "linear-gradient(to right, #434343 0%, black 100%)"})
+            gsap.from(".box2 .circle6", 1, {left:"90%", scale:"3", rotationY:"300deg"})
+            gsap.from(".box2 .circle7", 1, {left:"90%", scale:"3", rotation:"360deg"})
+            gsap.from(".box2 .circle8", 1, {left:"90%", scale:"0.5"})
+            gsap.from(".box2 .circle9", 1, {left:"90%", skew:"0.5"})
+            gsap.from(".box2 .circle10", 1, {left:"90%", scale:"0.5"})
+        })
+
+        $(".btn3").click(function(){            
+            gsap.to(".box3 .circle1", {duration: 2, left:"90%", rotation:"720deg", ease: "power1.out"})
+            gsap.to(".box3 .circle2", {duration: 2, left:"90%", rotation:"720deg", ease: "power2.out"})
+            gsap.to(".box3 .circle3", {duration: 2, left:"90%", rotation:"720deg", ease: "power3.out"})
+            gsap.to(".box3 .circle4", {duration: 2, left:"90%", rotation:"720deg", ease: "power4.out"})            
+            gsap.to(".box3 .circle5", {duration: 2, left:"90%", rotation:"720deg", ease: "back.out(1.7)"})
+            gsap.to(".box3 .circle6", {duration: 2, left:"90%", rotation:"720deg", ease: "elastic.out(1, 0.3)"})
+            gsap.to(".box3 .circle7", {duration: 2, left:"90%", rotation:"720deg", ease: "bounce.out"})            
+            gsap.to(".box3 .circle8", {duration: 2, left:"90%", rotation:"720deg", ease: "slow(0.7, 0.7, false)"})
+            gsap.to(".box3 .circle9",{duration: 2, left:"90%", rotation:"720deg", ease: "steps(12)"})
+        })
+
+        $(".btn4").click(function(){            
+            gsap.to(".box4 .circle1", {duration: 1, repeat:1, yoyo:true, left: "90%", rotation: "360deg", ease:"power4.out"})
+            gsap.to(".box4 .circle2", {duration: 1, repeat:2, yoyo:true, left: "90%", rotation: "360deg", ease:"power4.out"})
+            gsap.to(".box4 .circle3", {duration: 1, repeat:3, yoyo:true, left: "90%", rotation: "360deg", ease:"power4.out"})
+            gsap.to(".box4 .circle4", {duration: 1, repeat:4, yoyo:true, left: "90%", rotation: "360deg", ease:"power4.out"})
+            gsap.to(".box4 .circle5", {duration: 1, repeat:-1, yoyo:true, left: "90%", rotation: "360deg", ease:"power4.out"})
+        })
+        // 타임라인 3번만 움직이기
+        $(".box5").css("height","400px")
+        $(".btn5").click(function(){            
+            let tl = new TimelineMax({repeat : 2 , repeatDelay : 0 });
+            tl.to(".box5 .circle1", {duration:1, left:"90%", ease:"power2.out", scale:"1"})
+              .to(".box5 .circle1", {duration:1, top:"90%", ease:"power2.out",scale:"1.5"})
+              .to(".box5 .circle1", {duration:1, left:"0", ease:"power2.out", scale:"0.5"})
+              .to(".box5 .circle1", {duration:1, top:"0", ease:"power2.out", scale:"1"})
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax01</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+        @font-face {
+            font-family: 'DWImpactamin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #fff;}
+        :root { 
+            font-size: 12px;
+        }        
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'lato',sans-serif;
+        }
+        .title { 
+            position: fixed;
+            right: 0; top: 0;
+            z-index: 1000;
+            padding: 20px;            
+        }
+        .title h1 {
+            padding-bottom: 10px;
+            text-align: right;
+            font-family: 'DWImpactamin';
+        }
+        .title p {
+            text-align: right;
+            font-size: 18px;
+        }
+        .title ul {
+            padding: 20px 0 20px 20px;
+            text-align: right;
+        }
+        .title ul li {
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-family: 'Oswald';
+        }
+        .title li.active a {
+        border-bottom: 1px dashed #fff;
+    }
+        #wrap h1 {
+            font-size: 135px;
+            padding: 60px;
+            color: #dc6e25;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        #wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 330px;
+        }
+        .contents {        
+            /* width: 1920px;     */
+            margin: 300px 0 400px;
+        }
+        .content-item {
+            width: 1000px;            
+            margin: 200px 0 300px;
+            position: relative;
+        }
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+        .content-item-num {
+            font-size: 350px;
+            font-weight: 100;
+            position: absolute; right: -100px; top: -200px;
+            opacity: 0.08;            
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -100px;
+        }
+
+        .content-item-title {
+            text-align: right;
+            font-size: 24px;
+            font-weight: 300;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+
+        .content-item-imgWrap {
+            position: relative;
+            padding-bottom: 57%; 
+            overflow: hidden;
+        }
+        .content-item-img {
+            height: 550px;
+            position: absolute; top: 0;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 0;
+        }
+        .content-item-desc {
+            font-size: 80px;
+            line-height: 1.2;
+            font-weight: 600;
+            
+            text-align: right;
+            word-break: keep-all;
+            z-index: 2;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+        }
+
+        #section1 .content-item-img {background-image: url(img/img01.gif)}
+        #section2 .content-item-img {background-image: url(img/img02.gif)}
+        #section3 .content-item-img {background-image: url(img/img03.gif)}
+        #section4 .content-item-img {background-image: url(img/img04.gif)}
+        #section5 .content-item-img {background-image: url(img/img05.gif)}
+        #section6 .content-item-img {background-image: url(img/img06.gif)}
+        #section7 .content-item-img {background-image: url(img/img07.gif)}
+        #section8 .content-item-img {background-image: url(img/img08.gif)}
+        #section9 .content-item-img {background-image: url(img/img09.gif)}
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Parallax01</h1>
+        <p>레이아웃1</p>
+        <ul>
+            <li class="active"><a href="parallax01.html">Parallax01</a></li>
+            <li><a href="parallax02.html">Parallax02</a></li>
+            <li><a href="parallax03.html">Parallax03</a></li>
+            <li><a href="parallax04.html">Parallax04</a></li>
+            <li><a href="parallax05.html">Parallax05</a></li>
+            <li><a href="parallax06.html">Parallax06</a></li>
+            <li><a href="parallax07.html">Parallax07</a></li>
+            <li><a href="parallax08.html">Parallax08</a></li>            
+            <li><a href="parallax09.html">Parallax09</a></li>            
+            <li><a href="parallax10.html">Parallax10</a></li>            
+        </ul>
+    </div>
+    <section id="wrap">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="contents">
+            <section id="section1" class="content-item">
+                <span class="content-item-num">01</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">이 고양이는 무엇을 보고있는걸까요.</p>
+            </section>
+            <section id="section2" class="content-item">
+                <span class="content-item-num">02</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">무당벌레는 맛이 어떨까요.</p>
+            </section><section id="section3" class="content-item">
+                <span class="content-item-num">03</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">집사가 츄르를 들고 오고 있따.</p>
+            </section><section id="section4" class="content-item">
+                <span class="content-item-num">04</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">저 새끼 또 저러고 있네</p>
+            </section><section id="section5" class="content-item">
+                <span class="content-item-num">05</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">이 고양이는 무엇을 보고있는걸까요.</p>
+            </section><section id="section6" class="content-item">
+                <span class="content-item-num">06</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">이 고양이는 무엇을 보고있는걸까요.</p>
+            </section><section id="section7" class="content-item">
+                <span class="content-item-num">07</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">휘리리리리리리리리리릭</p>
+            </section><section id="section8" class="content-item">
+                <span class="content-item-num">08</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">이 고양이는 무엇을 보고있는걸까요.</p>
+            </section><section id="section9" class="content-item">
+                <span class="content-item-num">09</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img"></div>
+                </figure>
+                <p class="content-item-desc">고양이 키우고 싶다.</p>
+            </section>
+        </div>
+    </section>
+</body>
+</html>

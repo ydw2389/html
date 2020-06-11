@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide01 - 페이드 효과 이미지 슬라이드</title>
+
+    <!-- link -->    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+    @font-face {
+        font-family: 'DWImpactamin';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+        * {margin: 0; padding: 0; box-sizing: 0;}
+        a { text-decoration: none; color:#666;}
+        img {width: 100%; vertical-align: top;}
+        ul {
+        padding: 10px 20px;
+    }
+
+        body {
+            background: url(img/img01.gif) no-repeat;
+            background-size: cover;
+            font-family: 'Oswald', 'DWImpactamin';
+            color: #fff;
+            height: 100vh;
+        }
+        body::before {
+            content:'';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(50,37,11,0.86);
+            z-index: -1;
+        }
+        .info {
+            position: absolute; left: 0; top: 0; z-index: 1000;
+            padding: 20px;
+        }
+        .info2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .info2 a {
+        color:#fff;
+    }
+
+    .info2 li {
+        list-style: none;
+        margin-bottom: 5px;
+    }
+
+    .info2 li.active a {
+        border-bottom: 1px dashed #fff;
+    }
+        
+        
+        /* slide */
+        .slide-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slide-img {
+            position: relative;
+            width: 1000px; height: 600px;
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .slide-img .slides {
+            position: relative; left: 0; top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>Image Slider01</h1>
+        <p>페이드 효과 이미지 슬라이드</p>
+    </div>
+
+    <div class="info2">
+        <ul>
+            <li class="active"><a href="slide01.html">slide01</a></li>
+            <li><a href="slide02.html">slide02</a></li>
+            <li><a href="slide03.html">slide03</a></li>
+            <li><a href="slide04.html">slide04</a></li>
+            <li><a href="slide05.html">slide05</a></li>
+            <li><a href="slide06.html">slide06</a></li>
+            <li><a href="slide07.html">slide07</a></li>
+            <li><a href="slide08.html">slide08</a></li>
+            <li><a href="slide09.html">slide09</a></li>
+        </ul>
+    </div>
+    
+    <div class="slide-wrap">
+        <div class="slide-img">
+            <div class="slides"><img src="img/img01.gif" alt=""></div>
+            <div class="slides"><img src="img/img02.gif" alt=""></div>
+            <div class="slides"><img src="img/img03.gif" alt=""></div>
+            <div class="slides"><img src="img/img04.gif" alt=""></div>
+            <div class="slides"><img src="img/img05.gif" alt=""></div>
+        </div>
+    </div>   
+
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>    
+    <script>
+
+        let slideWrap = $(".slide-wrap")
+        let slideImg = $(".slide-img")
+        let slides = $(".slides")
+        let currentIndex = 0;               //현재 첫 번째로 보이는 이미지
+        let slideCount = 5;                 //이미지 갯수
+       
+        // function showNext(){
+        //     let nextIndex = (currentIndex + 1) % slideCount
+        //     currentIndex = nextIndex
+        //     slides.eq(currentIndex).fadeOut(200);
+        //     slides.eq(nextIndex).fadeIn(200);
+        // }        
+        setInterval(function(){
+            let nextIndex = (currentIndex + 1) % slideCount
+            currentIndex = nextIndex
+            slides.eq(currentIndex).fadeOut();
+            slides.eq(nextIndex).fadeIn();
+        },3000);
+        
+        
+    </script>
+    
+</body>
+</html>

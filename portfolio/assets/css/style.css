@@ -1,0 +1,396 @@
+/* fonts */
+@font-face { font-family: 'MapoFlowerIsland'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Didot'; src: url(../fonts/Didot\ Bold\ Italic.ttf);}
+@font-face { font-family: 'MapoDPPA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body {
+    cursor: none;
+}
+
+/* main */
+.main {
+    height: 100vh;
+}
+.main-background-square {
+    margin: 0 auto;
+    width: 80vw;
+    height: 50vh;
+    background: linear-gradient(248.29deg, #85A7E2 6.17%, rgba(255, 255, 255, 0) 64%), #7BE7D7;
+    position: relative;
+    border-radius: 5px;
+}
+.main-background-square h2{
+    display: block;
+    font-size: 7.5vw;
+    font-family: 'Didot';
+}
+.main-sectence01 {
+    display: flex;
+    position: absolute; top: 18vh; left: 4vw;
+    overflow: hidden;
+    width: 50vw;
+    height: 18vh;    
+    letter-spacing: -0.8vw;
+}
+.main-sectence01 span {
+    display:inline-block;
+    transform: translateY(56%);
+    opacity: 0;
+    transform-origin: bottom left;    
+    animation: move 1s cubic-bezier(0.275, -0.065, 0.305, 1.650) forwards;
+}
+.main-sectence02 {    
+    position: absolute; top: 36vh; left: 22vw;
+    overflow: hidden;
+    width: 50vw;
+    height: 18vh;    
+    letter-spacing: -0.8vw;    
+}
+.main-sectence02 span {
+    display:inline-block;
+    transform: translateY(56%);
+    opacity: 0;
+    transform-origin: bottom left;    
+    animation: move 1s cubic-bezier(0.275, -0.065, 0.305, 1.650) forwards;    
+}
+.main-sectence03 {    
+    position: absolute; top: 54vh; left: 44vw;
+    overflow: hidden;
+    width: 50vw;
+    height: 18vh;    
+    letter-spacing: -0.8vw;
+}
+.main-sectence03 span {
+    display:inline-block;
+    transform: translateY(56%);
+    opacity: 0;
+    transform-origin: bottom left;    
+    animation: move 1s cubic-bezier(0.275, -0.065, 0.305, 1.650) forwards;
+}
+@keyframes move {
+    to {transform: translateY(0%); opacity: 1;}
+}
+.main-sectence01 span:nth-child(1) {animation-delay: 0.1s;}
+.main-sectence01 span:nth-child(2) {animation-delay: 0.2s;}
+.main-sectence01 span:nth-child(3) {animation-delay: 0.3s;}
+.main-sectence01 span:nth-child(4) {animation-delay: 0.4s;}
+.main-sectence01 span:nth-child(5) {animation-delay: 0.5s;}
+.main-sectence01 span:nth-child(6) {animation-delay: 0.6s;}
+.main-sectence01 span:nth-child(7) {animation-delay: 0.7s;}
+.main-sectence01 span:nth-child(8) {animation-delay: 0.8s;}
+.main-sectence01 span:nth-child(9) {animation-delay: 0.9s;}
+
+.main-sectence02 span:nth-child(1) {animation-delay: 0.2s;}
+.main-sectence02 span:nth-child(2) {animation-delay: 0.3s;}
+.main-sectence02 span:nth-child(3) {animation-delay: 0.4s;}
+.main-sectence02 span:nth-child(4) {animation-delay: 0.5s;}
+.main-sectence02 span:nth-child(5) {animation-delay: 0.6s;}
+.main-sectence02 span:nth-child(6) {animation-delay: 0.7s;}
+.main-sectence02 span:nth-child(7) {animation-delay: 0.8s;}
+.main-sectence02 span:nth-child(8) {animation-delay: 0.9s;}
+.main-sectence02 span:nth-child(9) {animation-delay: 1s;}
+
+.main-sectence03 span:nth-child(1) {animation-delay: 0.2s;}
+.main-sectence03 span:nth-child(2) {animation-delay: 0.3s;}
+.main-sectence03 span:nth-child(3) {animation-delay: 0.4s;}
+.main-sectence03 span:nth-child(4) {animation-delay: 0.5s;}
+.main-sectence03 span:nth-child(5) {animation-delay: 0.6s;}
+.main-sectence03 span:nth-child(6) {animation-delay: 0.7s;}
+.main-sectence03 span:nth-child(7) {animation-delay: 0.8s;}
+.main-sectence03 span:nth-child(8) {animation-delay: 0.9s;}
+
+/* menu */
+#menu {
+    position: absolute;top: 8vh; right: 3.5vw;
+    width: 2vw;
+    height: 5vh;    
+    
+}
+.menu {
+    position: absolute; top: 2vh;
+    display: block;    
+    width: 2vw;
+    height: 2px;
+    background: rgb(160, 157, 157);
+}
+.menu::before {
+    content: '';
+    width: 1vw;
+    height: 2px;
+    background: rgb(160, 157, 157);
+    position: absolute; left: 1vw; top: 1.5vh
+}
+.menu::after {
+    content: '';
+    width: 1vw;
+    height: 2px;
+    background: rgb(160, 157, 157);
+    position: absolute; left: 0vw; top: -1.5vh
+}
+/* rectangle */
+.triangle-big {
+    width: 200px; height: 200px;
+    position: absolute; top: 10vh; left: 2vw;    
+    padding: 0 auto;
+    animation: tbg 11s infinite linear;
+}
+@keyframes tbg {
+    0% {top: 10vh;}
+    50% {top: 30vh;}
+    100% {top: 10vh;}
+}
+.triangle-big polygon{
+    stroke: #7BE7D7;
+    stroke-width: 2px;
+}
+.triangle-small {
+    width: 150px; height: 150px;
+    position: absolute; top: 75vh; left:20vw;
+    padding: 0 auto;
+    animation: ts 11s infinite linear;
+}
+@keyframes ts {
+    0% {top: 75vh;}
+    50% {top: 95vh;}
+    100% {top: 75vh;}
+}
+.triangle-small polygon{
+    stroke: #7BE7D7;
+    stroke-width: 2px;
+}
+.hexa {
+    width: 120px; height: 120px;
+    position: absolute; left: 70vw; top: 50vh;
+    animation: he 11s infinite linear; 
+}
+@keyframes he {
+    0% {top: 50vh;}
+    50% {top: 70vh;}
+    100% {top: 50vh;}
+}
+.hexagon {
+    stroke: #7BE7D7;
+    stroke-width: 2px;
+    transform-origin: center center;
+    animation: hex 11s linear infinite;
+}
+.wave-right {
+    position: absolute; right: 4vw; top: 15vh;
+    width: 100px; height: 100px;
+    animation: wav1 11s linear infinite;
+}
+@keyframes wav1 {
+    0% {top: 15vh;}
+    50% {top: 35vh;}
+    100% {top: 15vh;}
+}
+.wave-left {
+    position: absolute; left: 5vw; top: 66vh;
+    width: 100px; height: 100px;
+    animation: wav2 11s linear infinite;
+}
+@keyframes wav2 {
+    0% {top: 66vh;}
+    50% {top: 86vh;}
+    100% {top: 66vh;}
+}
+.wave1 {
+    stroke: #7BE7D7;
+    stroke-width: 1.5px;
+}
+@keyframes hex {
+    to {transform: rotate(720deg);}
+}
+.square-big-wrap {
+    position: absolute; left: 60vw; top: 90vh;
+    animation: sbw 11s linear infinite;
+}
+.square-big {    
+    width: 50px; height: 50px;
+    border: 1.5px solid #7BE7D7;    
+}
+@keyframes sbw {
+    0% {top: 90vh;}
+    50% {top: 110vh;}
+    100% {top: 90vh;}
+}
+.square-small-wrap {
+    position: absolute; left: 80vw; top: 20vh; 
+    animation: ssw 11s linear infinite;
+}
+.square-small {    
+    width: 30px; height: 30px;
+    border: 1.5px solid #7BE7D7;  
+    z-index: -100;
+    transform: rotate(30deg); 
+}
+@keyframes ssw {
+    0% {top: 20vh;}
+    50% {top: 40vh;}
+    100% {top: 20vh;}
+}
+.circle-big-wrap {
+    position: absolute; right: 7vw; top: 80vh;
+    animation: cbw 11s .5s linear infinite;
+}
+.circle-big {    
+    width: 100px; height: 100px;
+    border: 1px solid #7BE7D7;   
+    border-radius: 50%;
+}
+@keyframes cbw {
+    0% {top: 80vh;}
+    50% {top: 100vh;}
+    100% {top: 80vh;}
+}
+.circle-small-wrap {
+    position: absolute; left: 22vw; top: 53vh;
+    animation: csw 11s .5s linear infinite;
+}
+.circle-small {    
+    width: 50px; height: 50px;
+    border: 1px solid #7BE7D7;   
+    border-radius: 50%;
+}
+@keyframes csw {
+    0% {top: 53vh;}
+    50% {top: 73vh;}
+    100% {top: 53vh;}
+}
+.body-shape {
+    position: fixed; z-index: -9999;
+}
+.shape {
+    position: fixed;
+    transform-origin: center center;
+    transform: rotate(0);
+    animation: cycle 11s linear infinite;
+    z-index: -9999;
+}
+@keyframes cycle {
+    to {transform: rotate(360deg);}
+}
+
+/* scroll-line */
+.scroll-word {
+    font-size: 20px;
+    color: #706767;
+    opacity: 0.8;
+    font-family: 'Didot';
+    text-transform: uppercase;
+    position: absolute; top: 88vh; left: 50%;
+    transform: translate(-50%, 0);
+    animation: scrollword 2s linear infinite;
+}
+@keyframes scrollword {
+    0% {top: 88vh;}
+    50% {top: 86vh;}
+    100% {top: 88vh;}
+}
+.scroll-line {
+    position: absolute; left: 50%; top: 91vh;
+    width: 2px;
+    height: 9vh;
+    background: linear-gradient(180deg, #85A7E2 0%, rgba(255, 255, 255, 0) 100%), #7BE7D7;
+    transform: rotate(180deg);
+}
+
+
+/* about-me */
+#about-me {
+    margin-top: 70vh;
+    position: relative;
+    height: 100vh;   
+}
+.about-me-tit {
+    position: absolute; left: 10vw; top: 10vh;    
+    width: 30vw; height: 10vh;
+}
+.about-me-letter {
+    font-family: 'Didot';
+    font-size: 5.5vw;
+}
+.about-me-underline{
+    position: absolute; bottom: -3vh;    
+    width: 30vw; height: 3vh;
+    background: linear-gradient(270deg, #85A7E2 6.8%, rgba(255, 255, 255, 0) 68.93%), #7BE7D7;
+    opacity: 0.9;
+    transform: rotate(1.45deg);
+    z-index: -1000;
+}
+.aboutme-sentence {
+    position: absolute; left: 12vw; top: 30vh;
+    font-family: 'Didot';    
+    font-size: 1.5vw;
+    line-height: 2.5;
+}
+.aboutme-photo1 {
+    position: absolute; right: 20vw; top: 23vh;
+    width: 23vw; height: 60vh;
+    background: url(../img/photoblack.gif) no-repeat;
+    box-shadow: 3px 3px 10px;
+  
+}
+.aboutme-photo2 {
+    position: absolute; right: 15vw; top: 18vh;
+    width: 23vw; height: 60vh;
+    background: linear-gradient(156.62deg, #85A7E2 -0.76%, rgba(255, 255, 255, 0) 73.91%), #7BE7D7;  
+    z-index: -500;
+}
+.aboutme-effect1 {
+    position: absolute; right: 45.5vw; top: 13vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(45deg);    
+}
+.aboutme-effect2 {
+    position: absolute; right: 43vw; top: 11vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(80deg);
+}
+.aboutme-effect3 {
+    position: absolute; right: 47vw; top: 18vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(15deg);    
+}
+.aboutme-effect4 {
+    position: absolute; right: 9.5vw; top: 11vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(-45deg); 
+}
+.aboutme-effect5 {
+    position: absolute; right: 8vw; top: 16vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(-15deg); 
+}
+.aboutme-effect6 {
+    position: absolute; right: 12.5vw; top: 9vh;
+    display: block;
+    width: 3vw; height: 2px;
+    background: black;
+    transform: rotate(-80deg); 
+}
+.about-me span {
+    
+}
+
+/* cursor */
+.cursor {
+    position: absolute; left: -100px;top: -100px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 3px solid rgb(168, 248, 236);
+    background-color: rgba(123,231,215,0.1);
+    z-index: 1200;
+    user-select: none;
+    pointer-events: none;
+}

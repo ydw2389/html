@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout 09</title>
+    <style>
+        #wrap {          
+        }
+
+        #header {
+            height: 100px;
+            background-color: #B2EBF2
+        }
+
+        #banner {
+            height: 300px;
+            background-color: #80DEEA
+        }
+
+        #content1 {
+            height: 600px;
+            background-color: #4DD0E1
+        }
+
+        #content1 .porori {
+            overflow: hidden
+        }
+
+        #content1 .porori .box {
+            float: left;
+            width: 230px;
+            height: 230px;
+            background-color: yellow;
+            margin: 10px
+        }
+
+        #content2 {
+            height: 300px;
+            background-color: #26C6DA
+        }
+
+        #content3 {
+            height: 500px;
+            background-color: #00BCD4
+        }
+
+        #content3 .porori {
+            overflow: hidden
+        }
+
+        #content3 .porori .notice1 {
+            position: relative;
+            margin: 10px;
+            float: left;
+            width: 480px;
+            height: 250px;
+            background-color: #fff;
+        }
+
+        #content3 .porori .notice1 h4 {
+            color: blue;
+            text-align: left;
+            padding: 10px
+        }
+
+        #content3 .porori .notice1 ul {
+            padding: 8px
+        }
+
+        #content3 .porori .notice1 ul li {
+            background: url(../site-webstandard/img/dot.gif) no-repeat 0 8px
+        }
+
+        #content3 .porori .notice1 ul li a {
+            margin: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        #content3 .porori .notice1 .more {
+            width 17px height: 17px;
+            background: url(../site-webstandard/img/icon.png) -150px -90px;
+            position: absolute;
+            top: 0px;
+            right: 30px;
+        }
+
+
+        #content3 .porori .notice2 {
+            margin: 10px;
+            float: left;
+            width: 478px;
+            height: 250px;
+            background-color: #fff;
+        }
+        .content3 .porori .notice2 .ok {width: 350px; height: 200px; border: 1px solid #ccc; padding: 10px; }
+
+        .content3 .porori .notice2 ok h4 {position: relative}
+
+        .content3 .porori .notice2 ok h4 em {color: #f00}
+
+        .content3 .porori .notice2 ok ul {}
+
+        .content3 .porori .notice2 ok ul li {overflow: hidden;}
+
+        .content3 .porori .notice2 ok ul li a {float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .content3 .porori .notice2 ok ul li span {float: left; text-align: right;}
+
+        .content3 .porori .notice2 .ok .more {position: absolute; top: 0px; right: 8px; }
+
+
+        #footer {
+            height: 150px;
+            background-color: #00ACC1
+        }
+
+        .porori {
+            width: 1000px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="porori">header</div>
+        </div>
+        <div id="banner">
+            <div class="porori">banner</div>
+        </div>
+        <div id="content1">
+            <div class="porori">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <div id="content2">
+            <div class="porori">content2</div>
+        </div>
+        <div id="content3">
+            <div class="porori">
+                <div class="notice1">
+                    <h4>웹 퍼블리셔 면접 질문</h4>
+                    <ul>
+                        <li><a href="#">display: inline과 display: black의 차이점은 무엇인가</a></li>
+                        <li><a href="#">HTML 태그 중에 dl, dd, ul, li, ol,의 차이점은 무엇인가</a></li>
+                        <li><a href="#">HTML 태그 중에 strong과 em 태그의 차이점은 무엇이냐</a></li>
+                        <li><a href="#">컨텐츠 요소를 가운데로 오게 하는 방법을 알아보시요ㅗ</a></li>
+                        <li><a href="#">독타입을 선언하는 이유에 대해서 설명하세요 미나ㅓ</a></li>
+                    </ul>
+                    <a href="#" class="more" title="더보기">#</a>
+                </div>
+                <div class="notice2">
+                    <div class="ok">
+                        <h4>최신 <em>공지사항</em></h4>
+                        <ul>
+                            <li><a href="">jpg, png, gif의 차이점을 설명하시오</a><span>2019.10.29</span></li>
+                            <li><a href="">UI 디자인과 UX 디자인의 차이점을</a><span>2019.10.29</span></li>
+                            <li><a href="">인터렉션 디자인의 핵심을 말해보시오</a><span>2019.10.29</span></li>
+                        </ul>
+                        <a href="#" class="more2" title="더보기">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="porori">footer</div>
+        </div>
+    </div>
+</body></html>

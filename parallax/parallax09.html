@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax09</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/js/jquery-1.12.4.min.js">
+    <link rel="stylesheet" href="../assets/js/jquery-ui.min.js">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+        @font-face {
+            font-family: 'DWImpactamin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        a {text-decoration: none; color: #fff;}
+        :root { 
+            font-size: 12px;
+        }
+        body {
+            --color-h1: #dc6e25;
+            --color-title: #fff;
+            --color-sub: #999;
+            --color-link: #000;
+            --color-bg: #111;
+            --font-family: 'lato', sans-serif;
+            --aspect-ratio: 32/18;
+            --image-width-max: 500px;
+
+            background-color: var(--color-bg);
+            font-family: var(--font-family);
+            color: var(--color-title);
+        }
+
+        .title { 
+            position: fixed;
+            right: 0; top: 0;
+            z-index: 1000;
+            padding: 20px;            
+        }
+        .title h1 {
+            padding-bottom: 10px;
+            text-align: right;
+            font-family: 'DWImpactamin';
+        }
+        .title p {
+            text-align: right;
+            font-size: 18px;
+        }
+        .title ul {
+            padding: 20px 0 20px 20px;
+            text-align: right;
+        }
+        .title ul li {
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-family: 'Oswald';
+        }
+        .title li.active a {
+        border-bottom: 1px dashed #fff;
+    }
+        
+        #wrap h1 {
+            font-size: 7vw;
+            color: var(--color-h1);
+            padding: 3vw;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        #wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+        .contents {
+            margin: 35vh auto 35vh;
+        }
+
+        .content-item {
+            position: relative;
+            --image-width : calc(var(--image-width-max) * var(--aspect-ratio));
+            width: var(--image-width);
+            max-width: 90vw;
+            margin: 20vh 0 40vh;
+            
+        }
+
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+
+        .content-item-num {
+            font-size: 20vw;
+            font-weight: 100;
+            position: absolute;
+            right: -5vw; top: -15vw;
+            opacity: 0.04;
+            will-change: transform;
+        }
+
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -5vw;
+        }
+
+        .content-item-title {
+            text-align: right;
+            font-weight: 300;
+            text-transform: capitalize;
+            color: var(--color-sub);
+            padding-bottom: 0.8vw;
+            font-size: 1.5rem;
+        }
+
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+
+        .content-item-imgWrap {
+            position: relative;
+            --width: 100%;
+            width: var(--width);
+            padding-bottom: calc(var(--width)  / (var(--aspect-ratio)));
+            overflow: hidden;
+            /* background: #ccc; */
+        }
+
+        .content-item-img {
+            width: var(--width);
+            --overflow: 60px;
+            position: absolute; 
+            top: calc( -2 * var(--overflow));
+            height: calc(100% + (2 * var(--overflow)));
+            background-size: cover;
+            background-position: 50% 0;
+            will-change: transform;
+        }
+
+        .content-item-desc {
+            font-size: 4vw;
+            line-height: 1.2;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-title);
+            text-align: right;
+            word-break: keep-all;
+            margin-top: -6vw;
+            margin-right: -3vw;
+            position: relative;
+            z-index: 20;
+            transition: transform 0.3s ;
+            will-change: transform;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+            margin-right: 0;
+            margin-left: -3vw;
+        }
+
+      
+
+        /* #section1 .content-item-img {background-image: url(img/img01.gif);}
+        #section2 .content-item-img {background-image: url(img/img02.gif);}
+        #section3 .content-item-img {background-image: url(img/img03.gif);}
+        #section4 .content-item-img {background-image: url(img/img04.gif);}
+        #section5 .content-item-img {background-image: url(img/img05.gif);}
+        #section6 .content-item-img {background-image: url(img/img06.gif);}
+        #section7 .content-item-img {background-image: url(img/img07.gif);}
+        #section8 .content-item-img {background-image: url(img/img08.gif);}
+        #section9 .content-item-img {background-image: url(img/img09.gif);} */
+
+        /* info */
+        .info {
+            position: fixed; top: 20px; right: 250px;
+            background: rgba(255,255,255,0.4);
+            color : #000; padding: 10px;
+            font-size: 14px; font-weight: 300;
+            z-index: 10000;
+            font-style: normal;
+            font-family: 'Abel';
+        }
+        .reveal span,
+        .reveal img {
+            opacity: 0;
+        }
+        .reveal.show span,
+        .reveal.show img {
+            animation:  text 0.1s 1.1s forwards;
+        }
+
+        @keyframes text {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        #section1 .reveal.show::before,
+        #section1 .reveal.show::after {
+            content: '';
+            position: absolute; top: 0; right: 0;
+            /* width: 100%;  */
+            height: 100%;
+            z-index: 10;
+         }
+         #section2 .reveal.show::before,
+         #section2 .reveal.show::after {
+            content: '';
+            position: absolute; top: 0; right: 0;
+            /* width: 100%;  */
+            height: 100%;
+            z-index: 10;
+         }
+         #section3 .reveal.show::before,
+         #section3 .reveal.show::after {
+            content: '';
+            position: absolute; top: 0; right: 0;
+            width: 100%; 
+            /* height: 100%; */
+            z-index: 10;
+         }
+         #section4 .reveal.show::before,
+         #section4 .reveal.show::after {
+            content: '';
+            position: absolute; bottom: 0; right: 0;
+            width: 100%; 
+            /* height: 100%; */
+            z-index: 10;
+         }
+         .reveal.show::before {
+             background-color:red;
+         }
+         .reveal.show::after { 
+            background-color:rebeccapurple;
+            animation-delay: 0.5s;
+         }
+         .reveal.reveal-ltr.show::before {
+             animation: revealLTR 1.8s ease-in-out;
+         }
+         .reveal.reveal-ltr.show::after {
+            animation: revealLTR 1s 0.6s ease-in-out;
+         }
+
+         .reveal.reveal-rtl.show::before {
+            animation: revealRTL 1.8s ease-in-out;
+         }
+         .reveal.reveal-rtl.show::after {
+            animation: revealRTL 1s 0.6s ease-in-out;
+         }
+
+         .reveal.reveal-ttb.show::before {
+            animation: revealTTB 1.8s ease-in-out forwards;
+         }
+         .reveal.reveal-ttb.show::after {
+            animation: revealTTB 1s 0.6s ease-in-out forwards;
+         }
+
+         .reveal.reveal-btt.show::before {
+            animation: revealBTT 1.8s ease-in-out;
+         }
+         .reveal.reveal-btt.show::after {
+            animation: revealBTT 1s 0.6s ease-in-out;
+         }
+
+         @keyframes revealLTR {
+             0% {width: 0; left: 0;}
+             65% {width: 100%; left: 0;}
+             100% {width: 0; left: 100%;}
+         }
+         @keyframes revealRTL {
+            0% {width: 0; right: 0;}
+             65% {width: 100%; right: 0;}
+             100% {width: 0; right: 100%;}
+         }
+         @keyframes revealTTB {
+            0% {height: 0; top: 0;}
+             65% {height: 100%; top: 0;}
+             100% {height: 0; top: 100%;}
+         }
+         @keyframes revealBTT {
+            0% {height: 0; bottom: 0;}
+             65% {height: 100%; bottom: 0;}
+             100% {height: 0; bottom: 100%;}
+         }
+
+         /* modal */
+        .infor4 {position: fixed; left: 1vw; bottom: 1vw; z-index: 1000; padding: 20px;}
+        .infor4 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
+        .infor4 .modal {
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            text-align: left;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .infor4 .modal.show {
+            top: 0;
+        }
+        .infor4 .modal .close {
+            position: absolute; right: 10px; top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info">
+        <div>scrollTop() :<span class="scrollTop">0</span>px</div>
+    </div>
+    <div class="title">
+        <h1>Parallax09</h1>
+        <p>Reveal 효과</p>
+        <ul>
+            <li><a href="parallax01.html">Parallax01</a></li>
+            <li><a href="parallax02.html">Parallax02</a></li>
+            <li><a href="parallax03.html">Parallax03</a></li>
+            <li><a href="parallax04.html">Parallax04</a></li>
+            <li><a href="parallax05.html">Parallax05</a></li>
+            <li><a href="parallax06.html">Parallax06</a></li>
+            <li><a href="parallax07.html">Parallax07</a></li>
+            <li><a href="parallax08.html">Parallax08</a></li>            
+            <li class="active"><a href="parallax09.html">Parallax09</a></li>            
+            <li><a href="parallax09.html">Parallax10</a></li>            
+        </ul>
+    </div>
+
+    <!-- parallax -->
+    <section id="wrap">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="contents">
+            <section id="section1" class="content-item">
+                <span class="content-item-num">01</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr" data-sleep="100">
+                        <img src="img/img01.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr" data-sleep="500">
+                   <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section2" class="content-item">
+                <span class="content-item-num">02</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-rtl">
+                        <img src="img/img02.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-rtl">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section3" class="content-item">
+                <span class="content-item-num">03</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ttb">
+                        <img src="img/img03.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ttb">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section4" class="content-item">
+                <span class="content-item-num">04</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-btt">
+                        <img src="img/img04.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-btt">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section5" class="content-item">
+                <span class="content-item-num">05</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/img05.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section6" class="content-item">
+                <span class="content-item-num">06</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/img06.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section7" class="content-item">
+                <span class="content-item-num">07</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/img07.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section8" class="content-item">
+                <span class="content-item-num">08</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/img08.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+            <section id="section9" class="content-item">
+                <span class="content-item-num">09</span>
+                <h2 class="content-item-title">Basic Coding</h2>
+                <figure class="content-item-imgWrap">
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/img09.gif" alt="#">
+                    </div>
+                </figure>
+                <p class="content-item-desc reveal reveal-ltr">
+                    <span>높은 목표를 세우고, 스스로 채찍질 한다.</span>
+                </p>
+            </section>
+        </div>
+        <div class="infor4">
+            <a href="#" class="view">소스보기</a>
+    
+            <!-- modal -->
+            <div class="modal">
+                <div class="code-editor">   
+                    <span class="control"></span>
+                    <span class="control"></span>
+                    <span class="control"></span>
+    <pre class="line-numbers"><code class="language-js">$(window).scroll(function(){
+    $(".reveal").each(function(){
+        if($(window).scrollTop() + $(window).height()/2 > $(this).offset().top){
+            $(this).delay($(this).data("sleep")).queue(function(){
+                $(this).addClass("show");
+            })                       
+        }
+    })
+})
+</code></pre>               
+                    
+                </div>
+                <a class="close">Close</a>
+            </div>
+        </div>
+        <script src="../assets/js/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/jquery-ui.min.js"></script>    
+        <script src="../assets/js/gsap.min.js"></script>
+        <script src="../assets/js/prism.js"></script>
+        <script>
+
+           $(window).scroll(function(){
+               $(".reveal").each(function(){
+                   if($(window).scrollTop() + $(window).height()/2 > $(this).offset().top){
+                       $(this).delay($(this).data("sleep")).queue(function(){
+                        $(this).addClass("show");
+                       })                       
+                   }
+               })
+           })
+        </script>
+    </section>
+</body>
+</html>

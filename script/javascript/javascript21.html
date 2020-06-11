@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script>
+        // 100보다 작은 수 출력하기
+        let num = 0                 //초깃값 설정
+        while( num < 100 ){       //조건식 설정
+            
+            document.write(num,"<br>");
+            num++;
+        }
+
+        //100보다 작은 수(짝수만) 출력하기
+
+        let num2 = 0;
+        while(num2 < 100 ){
+            if( num2 % 2 == 0) {
+                document.write(num2,"<br>")
+               }
+               num2++;   
+            }
+        //100보다 작은 수(4의배수) 출력하기
+        
+        let num3 = 0;
+        while(num3 < 100 ){
+            if( num3 % 4 == 0) {
+                document.write(num3,"<br>")                
+            }
+            num3++
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

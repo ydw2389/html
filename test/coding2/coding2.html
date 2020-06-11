@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* 리셋 */
+        *{margin: 0;padding: 0;}
+        li {list-style: none;
+        color : #222;
+        }
+        img {width: 100%;}
+        em {font-style: normal;}
+        /* 레이아웃 */
+        #wrap {}
+        .container {
+            margin: 0 auto;
+            width: 2050px;
+        }
+        header {}
+        nav {margin-bottom: 50px;}
+        .advertise {margin-bottom: 50px;}
+        .contents {margin-bottom: 50px;}
+        footer {width: 100%;}
+        
+        /* header */
+        header {overflow: hidden; position: relative;}
+        header h2 {
+            float: left;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            }        
+        header ul { float: right; margin-top: 90px;margin-bottom: 20px; }
+        header ul li {
+            display:inline-block; 
+            padding-left: 100px;
+            font-size: 25px;
+            font-weight: bold;
+            }
+            /* advertise */
+            .advertise {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 30px;
+                }
+                .advertise .ad1 {
+                    background-color: #f2f2f2;
+                    height: 250px;
+                    position: relative;
+                    }
+                .advertise .ad2 {
+                    background-color: #f2f2f2;
+                    height: 250px;
+                    position: relative;
+                    }
+                .advertise h4{font-size: 40px; padding: 30px 0 0 30px;}
+                .advertise li {color: rgb(133, 133, 133); padding: 5px 0 0 30px;}
+                .advertise .cc {padding: 30px 0 0 30px;}
+                .advertise .dd {padding: 30px 0 0 30px;}  
+                .advertise .cc img, .dd img {height: 40px; width: 40px;}
+                .advertise .cc em {color: #ccc;}   
+                .advertise a img {
+                    position: absolute;
+                    top: 60px;
+                    right: 50px;
+                    width: 153px;
+                    height: 128px;
+                    }
+
+                /* contents */
+                .contents {}
+                .contents h3 {
+                    font-size: 50px;
+                    margin-bottom: 40px;
+                    }
+                .contents h3 em { color: #ccc;}
+                .contents ul {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 50px;
+                    }
+                .contents ul li {
+                    position: relative;
+                    font-size: 25px;
+                    font-weight: bold;
+                    }
+                .contents ul li em {color: rgb(168, 168, 168);}
+                .contents ul li div {
+                    width: 72px;
+                    position: absolute;
+                    top: 670px;
+                    right: 0;
+                    }
+
+                    /* footer */
+                    footer {
+                        background-color: #202020;
+                        overflow: hidden; 
+                    }
+                    footer .footer1 {
+                        float: left;
+                        height: 300px;
+                        position: relative;
+                        }
+                        footer .footer1 img {
+                            padding: 50px 0 0 200px;
+                            width: 50%;                          
+                        }
+                    footer .footer2 {float: right;
+                    color: rgb(180, 178, 178);
+                    padding: 40px;
+                    }
+                    footer .footer2 h4 {color: white;
+                    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header>
+                <h2><img src="img/LOGO.jpg" alt="로고입니다."></h2>
+                <ul>
+                    <li>COOKIT소개</li>
+                    <li>COOKIT메뉴</li>
+                    <li>리뷰</li>
+                    <li>이벤트</li>
+                    <li>MY쿡킷</li>
+                </ul>                
+            </header>
+            <nav><img src="../coding2/img/banner.jpg" alt=""></nav>
+            <section class=advertise>
+                <div class="ad1">
+                    <div class="aa">
+                        <h4>우리집도 COOKIT배송이 되나요?</h4>
+                        <li>배송이 가능한지 알려드려요</li>
+                        <div class="dd"><img src="img/pointer.jpg" alt="">배송지 검색</div>
+                    </div>
+                    <a href=""><img src="img/weight.jpg" alt=""></a>
+                </div>
+                <div class="ad2">
+                   <div class="bb">
+                        <h4>7월 30일(화)에 받을 수 있어요</h4>
+                        <li>오전 7시까지 주문하시면 다음날 배송됩니다.</li>
+                        <div class="cc"><img src="img/clock.jpg" alt="">63:28:32 <em>남은시간</em></div>
+                   </div>
+                    <a href=""><img src="img/truck.jpg" alt=""></a>
+                </div>                
+            </section>
+            <section class=contents>
+                <h3>실시간 베스트ㅣ<em>생생한 리뷰</em></h3>
+                <ul>
+                    <li><img src="img/cont1.jpg" alt=""><br>평양식 어복쟁반<br>33,800원 <em>/3인분</em><div><img src="../coding2/img/basket.jpg" alt=""></div></li>
+                    <li><img src="img/cont2.jpg" alt=""><br>새우주꾸미삼겹살<br>29,800원 <em>/3인분</em><div><img src="../coding2/img/basket.jpg" alt=""></div></li>
+                    <li><img src="img/cont3.jpg" alt=""><br>방풍나물 아귀찜<br>32,800원 <em>/3인분</em><div><img src="../coding2/img/basket.jpg" alt=""></div></li>                    
+                </ul>
+            </section>            
+        </div>
+        <footer>
+            <article class="footer1"><img src="../coding2/img/footer.jpg" alt=""></article>
+            <article class="footer2"><h4>이용약관 ㅣ 개인정보처리방침 ㅣ 법적고지 ㅣ 사업자정보 확인</h4><br><br>
+                씨제이제일제당(주) ㅣ 대표자 : 신현재<br>
+                주소:서울 중구 동호로 33- CJ제일제당 센터(우)04560ㅣ사업자등록번호:104-86-09535<br>
+                통신판매업신고 중구 제 07767호 ㅣ 개인정보보호책임자:류화정</article>
+        </footer>
+    </div>
+    
+</body>
+</html>

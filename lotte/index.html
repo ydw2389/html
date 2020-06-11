@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotte World</title>
+   <link rel="stylesheet" href="assets/css/reset.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header class="header">
+                <div class="logo"></div>
+                <ul class="header-menu">
+                    <li class="header-menu-hover">즐길거리
+                        <ul>
+                            <li>최다빈</li>
+                            <li>김용태</li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-hover">요금/우대혜택
+                        <ul>
+                            <li>류대웅</li>
+                            <li>이현진</li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-hover">참여프로그램
+                        <ul>
+                            <li>한경구</li>
+                            <li>김동일</li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-hover">이용가이드
+                        <ul>
+                            <li>정다정</li>
+                            <li>수진씨</li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-hover">소통서비스
+                        <ul>
+                            <li>세진씨</li>
+                            <li>웹쓰</li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+            <nav class="banner">
+                <div class="img-slider">
+                    <div class="slider"><img src="assets/img/banner.jpg" alt=""></div>
+                    <div class="slider"><img src="assets/img/banner.jpg" alt=""></div>
+                    <div class="slider"><img src="assets/img/banner.jpg" alt=""></div>                    
+                </div>
+            </nav>
+            <section class="contents1">
+                <div class="cont1-notice">
+                    <div class="tab-menu">
+                        <ul>
+                            <li class="active">롯데월드 소식</li>
+                            <li>뉴스 &middot; 공지</li>
+                        </ul>
+                    </div>
+                    <div class="tab-info">
+                        <div class="tab-info-01">
+                            <ul>
+                                <li><p>그럴싸진관 미라클</p><span>2018.11.20</span></li>
+                                <li><p>드림스테이지 '힘내 소중한 너'</p><span>2018.11.19</span></li>
+                                <li><p>'힘내 소중한 너' 음원 발매</p><span>2018.11.13</span></li>
+                                <li><p>이용 요금 조정 안내</p><span>2018.11.12</span></li>                                
+                            </ul>
+                        </div>
+                        <div class="tab-info-02">
+                            <ul>
+                                <li><p>속보) 유동원 오늘 지각안해</p><span>2020.06.05</span></li>
+                                <li><p>웹스토리보이는 오늘 어떤 점심을 먹을것인가</p><span>2018.11.19</span></li>
+                                <li><p>숙제 사실 준비 안함 ㅋㅋ~</p><span>2018.11.13</span></li>
+                                <li><p>아 오늘도 일찍 가야징</p><span>2018.11.12</span></li>                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more">더보기<img src="assets/img/more.jpg" alt=""></div>
+                </div>
+                <div class="cont1-benefit">
+                    <img src="assets/img/benefit.jpg" alt="">
+                </div>                
+            </section>
+
+            <div class="pop-up">
+                <div class="pop-up-close"></div>
+            </div>
+
+            <section class="contents2">
+                <h1>특별한 경험</h1>
+                <div class="cont2-imgwrap">
+                    <div>
+                        <img src="assets/img/cont-img-1.jpg" alt="">
+                        <p>연간회원안내</p>
+                    </div>
+                    <div>
+                        <img src="assets/img/cont-img-2.jpg" alt="">
+                        <p>프리미엄투어</p>
+                    </div>
+                    <div>
+                        <img src="assets/img/cont-img-3.jpg" alt="">
+                        <p>공연참여 프로그램</p>
+                    </div>
+                    <div>
+                        <img src="assets/img/cont-img-4.jpg" alt="">
+                        <p>단체프로그램</p>
+                    </div>
+                </div>
+
+            </section>
+            <footer class="footer">
+                <ul class="footer01">
+                    <li>서울시 송파구 올림픽로 240 호텔롯데 롯데월드</li>
+                    <li>대표자: 박동기</li>
+                </ul>
+                <ul class="footer02">
+                    <li>사업자등록번호:219-85-00014</li>
+                    <li>통신판매업신고번호 : 송파 제5513호</li>
+                    <li>전화 : 1661-2000</li>
+                </ul>
+                <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script>
+        // 이미지 슬라이드
+       setInterval(function(){
+           $(".img-slider").animate({left:"-1536px"},800,"easeInOutQuad",function(){
+            $("slider").appendTo($(".img-slider"))
+            $(".img-slider").css("left","")
+           })           
+       },3000)
+
+    //탭메뉴
+    $(".tab-info-02").hide()
+
+    $(".tab-menu li").click(function(){
+        let index = $(this).index()
+
+        $(".tab-menu li").removeClass("active")
+        $(this).addClass("active")
+        $(".tab-info div").hide()
+        $(".tab-info div").eq(index).show()
+    })
+
+    // 메뉴2단~
+
+    $(".header-menu .header-menu-hover").mouseenter(function(){
+        $(this).find("ul").stop().slideDown()
+    });
+    $(".header-menu .header-menu-hover").mouseleave(function(){
+        $(this).find("ul").stop().slideUp()
+    });
+
+    // 팝업
+    $(".cont1-benefit").on("click",function(){
+        $(".pop-up").fadeIn(500)
+    })
+    $(".pop-up .pop-up-close").on("click",function(){
+        $(".pop-up").fadeOut(500)
+    })
+
+    </script>
+    
+</body>
+</html>
